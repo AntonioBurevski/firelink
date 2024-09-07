@@ -1,20 +1,22 @@
-import 'antd/dist/reset.css';
-import FLHeader from "./components/FLHeader.tsx";
-import FLFooter from "./components/FLFooter.tsx";
+import FlHeader from "./components/FlHeader.tsx";
 import {Content} from "antd/es/layout/layout";
 import {Layout} from "antd";
-import FLContent from "./components/FLContent.tsx";
+import {ThemeProvider} from "./context/ThemeContext.tsx";
+import FlFooter from "./components/FlFooter.tsx";
+import FlContent from "./components/FlContent.tsx";
 
 function App() {
     return (
-        <Layout className="min-h-screen">
-            <FLHeader/>
-            <Content>
-                <FLContent/>
-            </Content>
-            <FLFooter/>
-        </Layout>
+        <ThemeProvider>
+            <Layout className="min-h-screen">
+                <FlHeader/>
+                <Content>
+                    <FlContent/>
+                </Content>
+                <FlFooter/>
+            </Layout>
+        </ThemeProvider>
     )
 }
 
-export default App
+export default App;

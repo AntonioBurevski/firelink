@@ -1,0 +1,8 @@
+.fl-content-container {
+    padding: 1rem;
+    background-color: var(--fl-accent);
+}
+
+.fl-section {
+    padding-bottom: 1rem;
+}
